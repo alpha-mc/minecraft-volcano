@@ -4,10 +4,10 @@ import { copy } from '@web/rollup-plugin-copy'
 import del from 'rollup-plugin-delete'
 
 export default defineConfig({
-  input: 'src/scripts/index.ts',
+  input: 'src/behavior_pack/scripts/index.ts',
   output: {
     dir: 'dist',
-    entryFileNames: 'scripts/[name].js',
+    entryFileNames: 'behavior_pack/scripts/[name].js',
     minify: true,
   },
   plugins: [
