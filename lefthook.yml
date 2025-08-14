@@ -1,0 +1,4 @@
+commit-msg:
+  jobs:
+    - name: Run commitlint
+      run: npx --no -- commitlint --edit $1
