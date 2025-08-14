@@ -1,0 +1,33 @@
+{
+  "name": "minecraft-volcano",
+  "version": "0.1.0",
+  "description": "[WIP] This add-on adds volcano biome to Minecraft!",
+  "license": "Unlicense",
+  "author": "Yeah",
+  "type": "module",
+  "scripts": {
+    "build": "rolldown -c rolldown.config.ts",
+    "check": "tsc",
+    "format": "eslint --fix",
+    "lint": "eslint",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "@eslint/js": "^9.33.0",
+    "@minecraft/server": "^2.1.0",
+    "@minecraft/server-gametest": "^1.0.0-beta.1.21.60-preview.24",
+    "@stylistic/eslint-plugin": "^5.2.3",
+    "@tsconfig/node-lts": "^22.0.2",
+    "@web/rollup-plugin-copy": "^0.5.1",
+    "eslint": "^9.33.0",
+    "globals": "^16.3.0",
+    "husky": "^9.1.7",
+    "jiti": "^2.5.1",
+    "rolldown": "^1.0.0-beta.32",
+    "rollup-plugin-delete": "^3.0.1",
+    "typescript": "^5.9.2",
+    "typescript-eslint": "^8.39.1"
+  }
+}
