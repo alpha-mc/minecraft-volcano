@@ -1,7 +1,6 @@
 {
   "extends": "@tsconfig/node-lts/tsconfig.json",
   "compilerOptions": {
-    "resolvePackageJsonExports": false,
     "noEmit": true,
   },
 }
