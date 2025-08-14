@@ -4,7 +4,7 @@
       "description": "Minecraft Valcano",
       "name": "Minecraft Valcano",
       "uuid":"d0cc4bce-67ab-4909-9a13-606610cf9cd7",
-      "version": [0, 1, 0],
+      "version": [1, 0, 0],
       "min_engine_version": [1, 20, 30]
     },
     "modules":
@@ -13,13 +13,13 @@
           "description": "Minecraft Valcano Data",
             "type": "data",
             "uuid": "2893b2b2-0a01-47cb-82cd-935482ebe112",
-            "version": [0, 1, 0]
+            "version": [1, 0, 0]
         },
         {
           "description": "Minecraft Valcano Script",
             "type": "script",
             "uuid": "f0611ebd-4341-474d-8f04-f7d03e9e2f7e",
-            "version": [0, 1, 0],
+            "version": [1, 0, 0],
             "entry": "scripts/index.js"
         }
       ],
