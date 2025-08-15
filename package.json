@@ -7,9 +7,9 @@
   "type": "module",
   "scripts": {
     "build": "rolldown -c rolldown.config.ts",
+    "dev": "npm run build && node ./tools/install.ts",
     "check": "tsc",
     "format": "eslint --fix",
-    "install": "node ./tools/install.ts",
     "lint": "eslint"
   },
   "devDependencies": {

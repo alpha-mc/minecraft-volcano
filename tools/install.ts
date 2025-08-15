@@ -3,6 +3,8 @@ import fs from 'node:fs'
 import path from 'node:path'
 import process from 'node:process'
 
+const PACK_NAME = 'minecraft-volcano'
+
 if (process.platform !== 'win32') {
   console.error('ERROR: This script is only for Windows.')
   process.exit(1)
@@ -16,7 +18,7 @@ if (!localAppDataPath) {
 
 const mojangPath = path.join(
   localAppDataPath,
-  '%localappdata%\\Packages\\Microsoft.MinecraftUWP_8wekyb3d8bbwe\\LocalState\\games\\com.mojang',
+  'Packages\\Microsoft.MinecraftUWP_8wekyb3d8bbwe\\LocalState\\games\\com.mojang',
 )
 
 const resourcePackPath = path.join(
@@ -29,17 +31,26 @@ const behaviorPackPath = path.join(
   'development_behavior_packs',
 )
 
-const packs = await fs.promises.readdir(path.join(__dirname, '../dist'))
+async function installPacks() {
+  const packs = await fs.promises.readdir(path.join(import.meta.dirname, '../dist'))
 
-packs.forEach(async (pack) => {
-  const packPath = path.join(__dirname, '../dist', pack)
-  const manifest = (await fs.promises.readFile(path.join(packPath, 'manifest.json'))).toString()
-  const manifestModules: { type: string }[] = JSON.parse(manifest)['modules']
+  packs.forEach(async (pack) => {
+    const packPath = path.join(import.meta.dirname, '../dist', pack)
+    const manifest = (await fs.promises.readFile(path.join(packPath, 'manifest.json'))).toString()
 
-  if (manifestModules.some(module => module['type'] === 'resources')) {
-    await fs.promises.symlink(packPath, path.join(resourcePackPath, pack))
-  }
-  else {
-    await fs.promises.symlink(packPath, path.join(behaviorPackPath, pack))
-  }
-})
+    try {
+      const manifestModules: { type: string }[] = JSON.parse(manifest)['modules']
+      if (manifestModules.some(module => module['type'] === 'resources')) {
+        await fs.promises.cp(packPath, path.join(resourcePackPath, PACK_NAME), { recursive: true })
+      }
+      else {
+        await fs.promises.cp(packPath, path.join(behaviorPackPath, PACK_NAME), { recursive: true })
+      }
+    }
+    catch (e) {
+      console.warn(`${pack}: ${e}`)
+    }
+  })
+}
+
+installPacks()
