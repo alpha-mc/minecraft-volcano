@@ -1,8 +1,8 @@
 {
   "format_version": 2,
   "header": {
-    "description": "Minecraft Valcano",
-    "name": "Minecraft Valcano",
+    "description": "Minecraft Volcano",
+    "name": "Minecraft Volcano",
     "uuid": "d0cc4bce-67ab-4909-9a13-606610cf9cd7",
     "version": [
       1,
@@ -17,7 +17,7 @@
   },
   "modules": [
     {
-      "description": "Minecraft Valcano Data",
+      "description": "Minecraft Volcano Data",
       "type": "data",
       "uuid": "2893b2b2-0a01-47cb-82cd-935482ebe112",
       "version": [
@@ -27,7 +27,7 @@
       ]
     },
     {
-      "description": "Minecraft Valcano Script",
+      "description": "Minecraft Volcano Script",
       "type": "script",
       "uuid": "f0611ebd-4341-474d-8f04-f7d03e9e2f7e",
       "version": [
