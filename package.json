@@ -9,6 +9,7 @@
     "build": "rolldown -c rolldown.config.ts",
     "check": "tsc",
     "format": "eslint --fix",
+    "install": "node ./tools/install.ts",
     "lint": "eslint"
   },
   "devDependencies": {
