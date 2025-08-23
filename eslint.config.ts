@@ -15,7 +15,6 @@ export default defineConfig(
       extends: ['js/recommended'],
       languageOptions: { globals: globals.node },
     },
-    // @ts-expect-error: typescript-eslint/typescript-eslint#10899
     tseslint.configs.recommended,
     stylistic.configs.recommended,
   ],
