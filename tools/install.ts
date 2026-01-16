@@ -10,15 +10,15 @@ if (process.platform !== 'win32') {
   process.exit(1)
 }
 
-const localAppDataPath = process.env['LOCALAPPDATA']
-if (!localAppDataPath) {
-  console.error('ERROR: LOCALAPPDATA environment variable is not set.')
+const roamingAppDataPath = process.env['APPDATA']
+if (!roamingAppDataPath) {
+  console.error('ERROR: APPDATA environment variable is not set.')
   process.exit(1)
 }
 
 const mojangPath = path.join(
-  localAppDataPath,
-  'Packages\\Microsoft.MinecraftUWP_8wekyb3d8bbwe\\LocalState\\games\\com.mojang',
+  roamingAppDataPath,
+  'Minecraft Bedrock\\Users\\Shared\\games\\com.mojang\\',
 )
 
 const resourcePackPath = path.join(

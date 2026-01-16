@@ -1,0 +1,52 @@
+{
+  "format_version": "1.21.110",
+  "minecraft:biome": {
+    "description": {
+      "identifier": "make:fire_volcano"
+    },
+    "components": {
+      "minecraft:tags": {
+        "tags": [
+          "volcano",
+          "fire",
+          "overworld"
+        ]
+      },
+      "minecraft:replace_biomes": {
+        "replacements": [
+          {
+            "dimension": "minecraft:overworld",
+            "targets": [
+              "minecraft:desert",
+              "minecraft:plains"
+            ],
+            "amount": 0.5,
+            "noise_frequency_scale": 25
+          }
+        ]
+      },
+      "minecraft:climate": {
+        "snow_accumulation": [
+          0.0,
+          0.125
+        ],
+        "temperature": 0.8,
+        "downfall": 0
+      },
+      "minecraft:overworld_height": {
+        "noise_type": "default"
+      },
+      "minecraft:surface_builder": {
+        "builder": {
+          "type": "minecraft:overworld",
+          "top_material": "minecraft:blackstone",
+          "mid_material": "minecraft:basalt",
+          "foundation_material": "minecraft:basalt",
+          "sea_material": "minecraft:lava",
+          "sea_floor_depth": 0,
+          "sea_floor_material": "minecraft:stone"
+        }
+      }
+    }
+  }
+}

@@ -11,8 +11,8 @@
     ],
     "min_engine_version": [
       1,
-      20,
-      30
+      21,
+      110
     ]
   },
   "modules": [
@@ -41,7 +41,7 @@
   "dependencies": [
     {
       "module_name": "@minecraft/server",
-      "version": "2.1.0"
+      "version": "2.4.0"
     }
   ]
 }
