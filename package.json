@@ -27,7 +27,7 @@
     "lefthook": "^2.0.0",
     "rolldown": "^1.0.0-beta.32",
     "rollup-plugin-delete": "^3.0.1",
-    "typescript": "^5.9.2",
+    "typescript": "^6.0.0",
     "typescript-eslint": "^8.39.1"
   }
 }
